@@ -9,27 +9,27 @@ _____________   _______________            _______   ___________________._______
         \/                  \/                    \/         \/                  \/1.0
 ```
 
-> Fork of [BotPEASS](https://github.com/carlospolop/BotPEASS/)
+> Fork de [BotPEASS](https://github.com/carlospolop/BotPEASS/)
 
-Use this bot to monitor new CVEs from defined vendors and send alerts to Slack, Telegram, Discord, Pushover and/or MS Teams. 
+Utilice este bot para supervisar las nuevas CVE de los proveedores definidos y enviar alertas a Slack, Telegram, Discord, Pushover y/o MS Teams.
 
-## Example with Microsoft Teams 
+## Ejemplo con Microsoft Teams
 
 ![](.github/MSTeamsNotification.png)
 
-## Configure one for yourself
+## Configure uno para usted
 
-**Configuring your own BotPEASS** that notifies you about the new CVEs containing specific keywords is very easy!
+**Configurar su propio BotPEASS** que le notifique los nuevos CVE que contengan palabras clave específicas es muy fácil.
 
-- Fork this repo
-- Modify the file `config/cve-notif.yaml` and set your own vendors
-- In the **github secrets** of your forked repo enter the following API keys:
-    - **VULNERS_API_KEY**: (Optional) This is used to find publicly available exploits. You can ue a Free API Key.
-    - **SLACK_WEBHOOK**: (Optional) Set the slack webhook to send messages to your slack group
-    - **DISCORD_WEBHOOK_URL**: (Optional) Set the discord webhook to send messages to your discord channel
-    - **TELEGRAM_BOT_TOKEN** and **TELEGRAM_CHAT_ID**: (Optional) Your Telegram bot token and the chat_id to send the messages to
-    - **PUSHOVER_DEVICE_NAME**, **PUSHOVER_USER_KEY** and **PUSHOVER_TOKEN**: (optional) Set the pushover information to send the message
-    - **MSTEAMS_WEBHOOK_URL**:(Optional) Set the Microsoft Teams webhook to send messages to your Microsoft Teams channel 
-- Check `.github/wordflows/cve-notif.yaml` and configure the cron (*once every 8 hours by default*)
+- Fork a esta repo
+- Modifique el archivo `config/cve-notif.yaml` y establezca sus propios proveedores
+- En los **github secrets** de su repositorio fork, introduzca las siguientes claves de API:
+    - **CLAVE_API_VULNERS**: (Opcional) Se utiliza para encontrar exploits disponibles públicamente. Puedes obtener una clave de API gratuita.
+    - **SLACK_WEBHOOK**: (Opcional) Configura el webhook de slack para enviar mensajes a tu grupo de slack.
+    - **DISCORD_WEBHOOK_URL**: (Opcional) Configura el webhook de discord para enviar mensajes a tu canal de discord.
+    - **TELEGRAM_BOT_TOKEN** y **TELEGRAM_CHAT_ID**: (Opcional) Tu token de bot de Telegram y el chat_id al que enviar los mensajes
+    - **PUSHOVER_DEVICE_NAME**, **PUSHOVER_USER_KEY** y **PUSHOVER_TOKEN**: (opcional) Establecer la información pushover para enviar el mensaje.
+    - **MSTEAMS_WEBHOOK_URL**:(Opcional) Establezca el webhook de Microsoft Teams para enviar mensajes a su canal de Microsoft Teams 
+- Comprueba `.github/wordflows/cve-notif.yaml` y configura el cron (*una vez cada 8 horas por defecto*)
 
-*Note that the Slack, Telegram, Pushover, Microsoft Teams and Discord configurations are optional, but if you don't set any of them you won't receive any notifications anywhere*
+*Ten en cuenta que las configuraciones de Slack, Telegram, Pushover, Microsoft Teams y Discord son opcionales, pero si no configuras ninguna de ellas no recibirás notificaciones en ningún sitio*.

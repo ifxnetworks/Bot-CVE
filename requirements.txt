@@ -1,5 +1,4 @@
-requests
-pyyaml
-vulners
-discord==1.7.3
-discord.py==1.7.3
+requests==2.32.3
+PyYAML==6.0.2
+vulners==2.2.1
+discord.py==1.7.3  # O considera cambiar a py-cord
